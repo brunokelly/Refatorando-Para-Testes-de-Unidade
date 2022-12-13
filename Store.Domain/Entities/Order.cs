@@ -38,6 +38,7 @@ namespace Store.Domain.Entities
         public void AddItem(Product product, int quantity)
         {
             var item = new OrderItem(product, quantity);
+
             if (item.IsValid)
                 Items.Add(item);
         }
